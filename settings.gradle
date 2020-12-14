@@ -1,4 +1,0 @@
-rootProject.name = 'exercism-kotlin'
-
-include 'hello-world'
-include 'rna-transcription'
