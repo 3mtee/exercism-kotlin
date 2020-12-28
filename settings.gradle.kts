@@ -14,5 +14,6 @@ include(
     "two-fer",
     "hamming",
     "raindrops",
-    "isogram"
+    "isogram",
+    "pig-latin"
 )
