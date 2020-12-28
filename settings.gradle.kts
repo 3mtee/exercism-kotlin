@@ -11,4 +11,4 @@ include("hello-world")
 include("rna-transcription")
 include("pangram")
 include("two-fer")
-
+include("hamming")
