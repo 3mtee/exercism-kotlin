@@ -1,8 +1,10 @@
 object PigLatin {
 
     private val vowels = listOf("a", "e", "i", "o", "u", "xr", "yt")
-    private val consonantClusters = listOf("ch", "qu", "squ", "thr", "th", "sch", "rh")
+    private const val ruleThreeConsonant = "qu"
+    private const val suffix = "ay"
 
+    private val consonantClusters = listOf("ch", ruleThreeConsonant, "thr", "th", "sch", "rh")
     fun translate(phrase: String): String = buildString {
         for (word in phrase.split(" ")) {
             append(convert(word))
@@ -10,23 +12,32 @@ object PigLatin {
         }
     }.trim()
 
-
-    private fun convert(phrase: String): String {
-        val vowel = vowels.find { phrase.startsWith(it) }
+    private fun convert(word: String): String {
+        val vowel = vowels.find { word.startsWith(it) }
         return if (vowel != null) {
-            phrase + "ay"
+            word + suffix
         } else {
-            processConsonantStart(phrase)
+            processConsonantStart(word)
         }
     }
 
-    // todo: make it use rules 3 & 4
-    private fun processConsonantStart(phrase: String): String {
-        val consonantCluster = consonantClusters.find { phrase.startsWith(it) }
-        return if (consonantCluster != null) {
-            phrase.substring(consonantCluster.length) + consonantCluster + "ay"
+    private fun processConsonantStart(word: String): String = buildString {
+        val consonant = StringBuilder()
+        val consonantCluster = consonantClusters.find { word.startsWith(it) }
+        if (consonantCluster != null) {
+            consonant.append(consonantCluster)
         } else {
-            phrase.substring(1) + phrase[0] + "ay"
+            consonant.append(word[0])
         }
+        val consonantlessWord = StringBuilder(word.substring(consonant.length))
+        if (consonantlessWord.startsWith(ruleThreeConsonant)) {
+            consonantlessWord.delete(0, 2)
+            consonant.append(ruleThreeConsonant)
+        }
+
+        append(consonantlessWord)
+        append(consonant)
+        append(suffix)
+
     }
 }
