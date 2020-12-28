@@ -13,5 +13,6 @@ include(
     "pangram",
     "two-fer",
     "hamming",
-    "raindrops"
+    "raindrops",
+    "isogram"
 )
