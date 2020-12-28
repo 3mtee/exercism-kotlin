@@ -7,8 +7,11 @@ pluginManagement {
 }
 
 rootProject.name = "exercism-kotlin"
-include("hello-world")
-include("rna-transcription")
-include("pangram")
-include("two-fer")
-include("hamming")
+include(
+    "hello-world",
+    "rna-transcription",
+    "pangram",
+    "two-fer",
+    "hamming",
+    "raindrops"
+)
