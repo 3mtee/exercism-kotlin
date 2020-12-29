@@ -16,5 +16,6 @@ include(
     "raindrops",
     "isogram",
     "pig-latin",
-    "anagram"
+    "anagram",
+    "diamond"
 )
