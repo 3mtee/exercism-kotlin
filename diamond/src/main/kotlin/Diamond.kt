@@ -2,7 +2,17 @@ class DiamondPrinter {
 
     private val alphabet = CharArray(26) { (it + 65).toChar() }
 
-    fun printToList(letter: Char): List<String> {
+
+    fun printToList(c: Char): List<String> {
+        require(c in 'A'..'Z')
+
+        val vp = ('A' until c) + (c downTo 'A')
+        val hp = (c downTo 'A') + ('B'..c)
+
+        return vp.map { y -> hp.map { x -> if (x == y) y else ' ' }.joinToString("") }
+    }
+
+    /*fun printToList(letter: Char): List<String> {
         val result: MutableList<String> = mutableListOf()
         val index = alphabet.indexOf(letter)
 
@@ -33,6 +43,10 @@ class DiamondPrinter {
         for (j in lineIndex until letterIndex) {
             append(spaceChar)
         }
-    }
+    }*/
+}
+
+fun main() {
+    DiamondPrinter().printToList('B').forEach { println(it) }
 }
 
