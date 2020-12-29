@@ -18,5 +18,6 @@ include(
     "pig-latin",
     "anagram",
     "diamond",
-    "bob"
+    "bob",
+    "beer-song"
 )
