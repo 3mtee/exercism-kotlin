@@ -1,6 +1,5 @@
 object ResistorColorDuo {
 
-    fun value(vararg colors: Color): Int {
-        TODO("Implement this to complete the task")
-    }
+    fun value(vararg colors: Color): Int =
+        colors.take(2).map { it.ordinal.toString() }.reduce { acc, s -> acc + s }.toInt()
 }
