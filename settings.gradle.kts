@@ -19,5 +19,6 @@ include(
     "anagram",
     "diamond",
     "bob",
-    "beer-song"
+    "beer-song",
+    "resistor-color"
 )
