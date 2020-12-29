@@ -20,5 +20,6 @@ include(
     "diamond",
     "bob",
     "beer-song",
-    "resistor-color"
+    "resistor-color",
+    "resistor-color-duo"
 )
