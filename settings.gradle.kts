@@ -23,5 +23,6 @@ include(
     "resistor-color",
     "resistor-color-duo",
     "acronym",
-    "reverse-string"
+    "reverse-string",
+    "dnd-character"
 )
