@@ -1,4 +1,3 @@
-import kotlin.math.floor
 import kotlin.random.Random
 
 class DndCharacter {
@@ -16,10 +15,10 @@ class DndCharacter {
         fun ability(): Int = (0..3)
             .map { Random.nextInt(1, 7) }
             .sortedDescending()
-            .subList(0, 3)
-            .reduce { acc, score -> acc + score }
+            .dropLast(1)
+            .sum()
 
-        fun modifier(score: Int): Int = floor((score - 10) / 2.0).toInt()
+        fun modifier(score: Int): Int = score / 2 - 5 // same as "score / 2 - 10 / 2"
     }
 
 }
