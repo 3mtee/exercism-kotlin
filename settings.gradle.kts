@@ -21,5 +21,6 @@ include(
     "bob",
     "beer-song",
     "resistor-color",
-    "resistor-color-duo"
+    "resistor-color-duo",
+    "acronym"
 )
