@@ -22,5 +22,6 @@ include(
     "beer-song",
     "resistor-color",
     "resistor-color-duo",
-    "acronym"
+    "acronym",
+    "reverse-string"
 )
