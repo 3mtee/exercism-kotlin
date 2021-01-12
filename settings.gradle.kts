@@ -25,5 +25,6 @@ include(
     "acronym",
     "reverse-string",
     "dnd-character",
-    "gigasecond"
+    "gigasecond",
+    "luhn"
 )
