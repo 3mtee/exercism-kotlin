@@ -4,12 +4,9 @@ object Hamming {
         if (leftStrand.length != rightStrand.length) {
             throw IllegalArgumentException("left and right strands must be of equal length")
         }
-        var distance = 0
-        for(i in leftStrand.indices) {
-            if (leftStrand[i] != rightStrand[i]) {
-                distance++
-            }
-        }
-        return distance
+
+        return leftStrand.toList()
+            .foldIndexed(0, { index, acc, char -> if (char != rightStrand[index]) acc + 1 else acc })
     }
+
 }
