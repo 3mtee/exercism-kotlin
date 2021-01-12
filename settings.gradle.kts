@@ -24,5 +24,6 @@ include(
     "resistor-color-duo",
     "acronym",
     "reverse-string",
-    "dnd-character"
+    "dnd-character",
+    "gigasecond"
 )
