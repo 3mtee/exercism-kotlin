@@ -1,12 +1,8 @@
 object Hamming {
 
-    fun compute(leftStrand: String, rightStrand: String): Int {
-        if (leftStrand.length != rightStrand.length) {
-            throw IllegalArgumentException("left and right strands must be of equal length")
-        }
-
-        return leftStrand.toList()
-            .foldIndexed(0, { index, acc, char -> if (char != rightStrand[index]) acc + 1 else acc })
+    fun compute(dna1: String, dna2: String): Int {
+        require(dna1.length == dna2.length) { "left and right strands must be of equal length." }
+        return dna1.zip(dna2).count { it.first != it.second }
     }
 
 }
