@@ -26,5 +26,6 @@ include(
     "reverse-string",
     "dnd-character",
     "gigasecond",
-    "luhn"
+    "luhn",
+    "scrabble-score"
 )
