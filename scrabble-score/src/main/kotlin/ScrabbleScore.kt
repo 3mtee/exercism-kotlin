@@ -9,8 +9,11 @@ object ScrabbleScore {
         listOf('q', 'z') to 10
     )
         .asSequence()
+//        convert a sequence of lists to a sequence of maps
         .map { entry -> entry.key.associateWith { entry.value } }
+//        flatten
         .flatMap { it.entries }
+//        convert to map
         .associate { Pair(it.key, it.value) }
 
 
