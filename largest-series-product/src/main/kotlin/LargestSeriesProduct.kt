@@ -10,16 +10,10 @@ class Series(input: String) {
             return 1
         }
         require(span > 0) { "Negative span is forbidden" }
-        val count = this.digits.count()
-        require(span <= count) { "Span shouldn't exceed the size of the input" }
+        require(span <= digits.count()) { "Span shouldn't exceed the size of the input" }
 
-        var result = 0L
-        for (i in 0..count - span) {
-            result = digits.subList(i, i + span)
-                .reduce { acc, d -> acc * d }
-                .toLong()
-                .takeIf { it > result } ?: result
-        }
-        return result
+        return digits
+            .windowed(span) { it.fold(1L) { acc, d -> acc * d } }
+            .maxOrNull() ?: 0
     }
 }
