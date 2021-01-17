@@ -27,5 +27,6 @@ include(
     "dnd-character",
     "gigasecond",
     "luhn",
-    "scrabble-score"
+    "scrabble-score",
+    "largest-series-product"
 )
