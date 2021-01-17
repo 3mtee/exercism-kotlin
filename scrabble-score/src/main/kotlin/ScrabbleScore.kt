@@ -1,16 +1,16 @@
 object ScrabbleScore {
     private val scoreMap: Map<Char, Int> = mapOf(
-        listOf('a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't') to 1,
-        listOf('d', 'g') to 2,
-        listOf('b', 'c', 'm', 'p') to 3,
-        listOf('f', 'h', 'v', 'w', 'y') to 4,
-        listOf('k') to 5,
-        listOf('j', 'x') to 8,
-        listOf('q', 'z') to 10
+        "a,e,i,o,u,l,n,r,s,t" to 1,
+        "d,g" to 2,
+        "b,c,m,p" to 3,
+        "f,h,v,w,y" to 4,
+        "k" to 5,
+        "j,x" to 8,
+        "q,z" to 10
     )
         .asSequence()
 //        convert a sequence of lists to a sequence of maps
-        .map { entry -> entry.key.associateWith { entry.value } }
+        .map { entry -> entry.key.split(',').associate { Pair(it[0], entry.value) } }
 //        flatten
         .flatMap { it.entries }
 //        convert to map
