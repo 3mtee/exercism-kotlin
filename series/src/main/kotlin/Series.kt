@@ -4,8 +4,7 @@ object Series {
         require(s.isNotEmpty()) { "Empty series is forbidden" }
         require(n <= s.length) { "Slice size shouldn't exceed that of a series" }
         return s
-            .asSequence()
-            .windowed(n, transform = { it.map { c -> c - '0' } })
-            .toList()
+            .map { it - '0' }
+            .windowed(n)
     }
 }
