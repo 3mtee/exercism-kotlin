@@ -30,5 +30,6 @@ include(
     "scrabble-score",
     "largest-series-product",
     "phone-number",
-    "nucleotide-count"
+    "nucleotide-count",
+    "series"
 )
