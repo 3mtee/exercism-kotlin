@@ -31,5 +31,6 @@ include(
     "largest-series-product",
     "phone-number",
     "nucleotide-count",
-    "series"
+    "series",
+    "matrix"
 )
