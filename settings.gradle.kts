@@ -33,5 +33,6 @@ include(
     "nucleotide-count",
     "series",
     "matrix",
-    "roman-numerals"
+    "roman-numerals",
+    "isbn-verifier"
 )
