@@ -32,5 +32,6 @@ include(
     "phone-number",
     "nucleotide-count",
     "series",
-    "matrix"
+    "matrix",
+    "roman-numerals"
 )
