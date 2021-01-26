@@ -35,5 +35,6 @@ include(
     "matrix",
     "roman-numerals",
     "isbn-verifier",
-    "armstrong-numbers"
+    "armstrong-numbers",
+    "resistor-color-trio"
 )
