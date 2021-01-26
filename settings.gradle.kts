@@ -34,5 +34,6 @@ include(
     "series",
     "matrix",
     "roman-numerals",
-    "isbn-verifier"
+    "isbn-verifier",
+    "armstrong-numbers"
 )
