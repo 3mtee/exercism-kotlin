@@ -7,9 +7,7 @@ class IsbnVerifier {
         }
         return cleanIsbn
             .map { if (it == 'X') 10 else it - '0' }
-            .zip(10 downTo 0)
-            .fold(0) { acc, pair ->
-                acc + pair.first * pair.second
-            } % 11 == 0
+            .foldIndexed(0) { index, acc, i -> acc + i * (10 - index) }
+            .rem(11) == 0
     }
 }
