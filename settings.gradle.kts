@@ -8,7 +8,7 @@ pluginManagement {
 
 rootProject.name = "exercism-kotlin"
 include(
-    "hello-world",
+    /*"hello-world",
     "rna-transcription",
     "pangram",
     "two-fer",
@@ -31,10 +31,11 @@ include(
     "largest-series-product",
     "phone-number",
     "nucleotide-count",
-    "series",
+    "series",*/
     "matrix",
     "roman-numerals",
     "isbn-verifier",
     "armstrong-numbers",
-    "resistor-color-trio"
+    "resistor-color-trio",
+    "transpose"
 )
