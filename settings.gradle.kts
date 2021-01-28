@@ -38,5 +38,6 @@ include(
     "armstrong-numbers",
     "resistor-color-trio",
     "transpose",
-    "difference-of-squares"
+    "difference-of-squares",
+    "leap"
 )
