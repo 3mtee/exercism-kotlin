@@ -41,5 +41,6 @@ include(
     "difference-of-squares",
     "leap",
     "secret-handshake",
-    "space-age"
+    "space-age",
+    "allergies"
 )
