@@ -7,12 +7,10 @@ You and your fellow cohort of those in the "know" when it comes to
 binary decide to come up with a secret "handshake".
 
 ```text
-1 = wink
-10 = double blink
-100 = close your eyes
-1000 = jump
-
-
+00001 = wink
+00010 = double blink
+00100 = close your eyes
+01000 = jump
 10000 = Reverse the order of the operations in the secret handshake.
 ```
 
