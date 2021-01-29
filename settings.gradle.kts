@@ -39,5 +39,6 @@ include(
     "resistor-color-trio",
     "transpose",
     "difference-of-squares",
-    "leap"
+    "leap",
+    "secret-handshake"
 )
