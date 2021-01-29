@@ -1,5 +1,8 @@
 enum class Signal {
-
-  WINK, DOUBLE_BLINK, CLOSE_YOUR_EYES, JUMP
+  WINK, //2**0
+  DOUBLE_BLINK,//2**1
+  CLOSE_YOUR_EYES,//2**2
+  JUMP,//2**3
+  REVERT//2**4
 
 }
