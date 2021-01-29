@@ -40,5 +40,6 @@ include(
     "transpose",
     "difference-of-squares",
     "leap",
-    "secret-handshake"
+    "secret-handshake",
+    "space-age"
 )
