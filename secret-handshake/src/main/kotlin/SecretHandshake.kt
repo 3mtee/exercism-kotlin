@@ -1,32 +1,13 @@
-import kotlin.math.pow
-
 object HandshakeCalculator {
     fun calculateHandshake(number: Int): List<Signal> {
-        val signals = Signal.values().reversed()
-        var i = 0
-        var n = number
-        val result = mutableListOf<Signal>()
-        var revert = true
-        while (n > 0) {
-            val signal = signals[i]
-            val num = 2.0.pow(signal.ordinal).toInt()
-            if (num > n) {
-                i++
-            } else {
-                n -= num
-                if (signal == Signal.REVERT) {
-                    revert = !revert
-                } else
-                    result.add(signal)
-            }
-        }
-
-//        val binary = number.toString(2)
-
-        return if (revert) result.reversed() else result
+        val binary = number.toString(2)
+        return binary
+            .padStart(4, '0')
+            .takeLast(4)
+            .asIterable()
+            .reversed()
+            .mapIndexed { i, c -> if (c == '1') Signal.values()[i] else null }
+            .filterNotNull()
+            .let { if (binary.length == 5) it.reversed() else it }
     }
-}
-
-fun main() {
-    print(HandshakeCalculator.calculateHandshake(19))
 }
