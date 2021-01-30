@@ -43,5 +43,6 @@ include(
     "secret-handshake",
     "space-age",
     "allergies",
-    "meetup"
+    "meetup",
+    "custom-set"
 )
