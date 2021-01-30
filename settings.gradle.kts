@@ -42,5 +42,6 @@ include(
     "leap",
     "secret-handshake",
     "space-age",
-    "allergies"
+    "allergies",
+    "meetup"
 )
