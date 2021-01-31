@@ -44,6 +44,6 @@ include(
     "space-age",
     "allergies",
     "meetup",
-//    "custom-set",
+    "custom-set",
     "triangle"
 )
