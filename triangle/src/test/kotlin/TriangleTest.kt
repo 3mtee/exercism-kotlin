@@ -99,4 +99,14 @@ class TriangleTest {
         assertTrue(Triangle(0.5, 0.4, 0.6).isScalene)
     }
 
+    @Test
+    fun `degenerate triangle | Integers`() {
+        assertTrue(Triangle(1, 1, 2).isDegenerate)
+    }
+
+    @Test
+    fun `degenerate triangle | floats`() {
+        assertTrue(Triangle(1.5, 1.5, 3.0).isDegenerate)
+    }
+
 }
