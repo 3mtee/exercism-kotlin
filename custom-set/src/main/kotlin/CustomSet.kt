@@ -1,40 +1,40 @@
-class CustomSet() {
+class CustomSet(vararg input: Int) {
 
-    // TODO: implement proper constructor
+    private val data = mutableSetOf(*input.toTypedArray())
 
-    fun isEmpty(): Boolean {
-        TODO("Implement this function to complete the task")
-    }
+    fun isEmpty(): Boolean = data.isEmpty()
 
-    fun isSubset(other: CustomSet): Boolean {
-        TODO("Implement this function to complete the task")
-    }
+    fun isSubset(other: CustomSet): Boolean = other.data.containsAll(data)
 
-    fun isDisjoint(other: CustomSet): Boolean {
-        TODO("Implement this function to complete the task")
-    }
+    fun isDisjoint(other: CustomSet): Boolean = intersection(other).data.isEmpty()
 
-    fun contains(other: Int): Boolean {
-        TODO("Implement this function to complete the task")
-    }
+    fun contains(other: Int): Boolean = data.contains(other)
 
     fun intersection(other: CustomSet): CustomSet {
-        TODO("Implement this function to complete the task")
+        val copy = mutableSetOf(*data.toTypedArray())
+        copy.retainAll(other.data)
+        val elements = copy.toIntArray()
+        return CustomSet(*elements)
     }
 
-    fun add(other: Int) {
-        TODO("Implement this function to complete the task")
-    }
+    fun add(other: Int) = data.add(other)
 
     override fun equals(other: Any?): Boolean {
-        TODO("Implement this function to complete the task")
+        if (other !is CustomSet) {
+            return false
+        }
+        return data == other.data
     }
 
     operator fun plus(other: CustomSet): CustomSet {
-        TODO("Implement this function to complete the task")
+        data.addAll(other.data)
+        return this
     }
 
     operator fun minus(other: CustomSet): CustomSet {
-        TODO("Implement this function to complete the task")
+        data.removeAll(other.data)
+        return this
     }
+
+    override fun hashCode(): Int = data.hashCode()
 }
