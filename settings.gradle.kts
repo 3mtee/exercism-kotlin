@@ -46,5 +46,6 @@ include(
     "meetup",
     "custom-set",
     "triangle",
-    "saddle-points"
+    "saddle-points",
+    "darts"
 )
