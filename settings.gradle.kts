@@ -47,5 +47,6 @@ include(
     "custom-set",
     "triangle",
     "saddle-points",
-    "darts"
+    "darts",
+    "flatten-array"
 )
