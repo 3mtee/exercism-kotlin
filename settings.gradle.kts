@@ -48,5 +48,6 @@ include(
     "triangle",
     "saddle-points",
     "darts",
-    "flatten-array"
+    "flatten-array",
+    "minesweeper"
 )
