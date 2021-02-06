@@ -49,5 +49,6 @@ include(
     "saddle-points",
     "darts",
     "flatten-array",
-    "minesweeper"
+    "minesweeper",
+    "word-count"
 )
