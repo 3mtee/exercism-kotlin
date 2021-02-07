@@ -50,5 +50,6 @@ include(
     "darts",
     "flatten-array",
     "minesweeper",
-    "word-count"
+    "word-count",
+    "crypto-square"
 )
