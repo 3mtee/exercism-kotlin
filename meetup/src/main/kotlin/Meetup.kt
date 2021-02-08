@@ -34,7 +34,3 @@ class Meetup(
         }
     }
 }
-
-fun main() {
-    println(LocalDate.of(2020, 2, 30))
-}
