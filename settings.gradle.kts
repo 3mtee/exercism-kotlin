@@ -51,5 +51,6 @@ include(
     "flatten-array",
     "minesweeper",
     "word-count",
-    "crypto-square"
+    "crypto-square",
+    "robot-name"
 )
