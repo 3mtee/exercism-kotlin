@@ -52,5 +52,6 @@ include(
     "minesweeper",
     "word-count",
     "crypto-square",
-    "robot-name"
+    "robot-name",
+    "dominoes"
 )
