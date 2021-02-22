@@ -14,15 +14,16 @@ class Robot {
 
     var name: String = generateName()
 
-    private fun generateName(): String {
-        var newName: String
-        do {
-            newName = CHAR_POOL.randomChars(2) + NUM_POOL.randomChars(3)
-        } while (newName in NAMES)
-
-        NAMES.add(newName)
-        return newName
-    }
+    private fun generateName(): String = CHAR_POOL.randomChars(2)
+        .plus(NUM_POOL.randomChars(3))
+        .let {
+            if (it in NAMES) {
+                generateName()
+            } else {
+                NAMES.add(it)
+                it
+            }
+        }
 
     fun reset() {
         name = generateName()
