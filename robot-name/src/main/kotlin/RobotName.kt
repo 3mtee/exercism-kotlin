@@ -14,16 +14,15 @@ class Robot {
 
     var name: String = generateName()
 
-    private fun generateName(): String = CHAR_POOL.randomChars(2)
-        .plus(NUM_POOL.randomChars(3))
-        .let {
-            if (it in NAMES) {
-                generateName()
-            } else {
-                NAMES.add(it)
-                it
-            }
-        }
+    private fun generateName(): String {
+        do {
+            val name = NAMES.addAndReturn(CHAR_POOL.randomChars(2) + NUM_POOL.randomChars(3))
+            if (name != null) return name
+        } while (name == null)
+        return ""
+    }
+
+    private fun MutableSet<String>.addAndReturn(element: String): String? = if (this.add(element)) element else null
 
     fun reset() {
         name = generateName()
