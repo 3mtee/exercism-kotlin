@@ -1,3 +1,20 @@
-group = "org.painsomnia"
-version = "1.0-SNAPSHOT"
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+version = "1.0-SNAPSHOT"
+group = "org.painsomnia"
+
+plugins {
+    kotlin("jvm") apply false
+}
+
+subprojects {
+    tasks.withType<KotlinCompile> {
+        kotlinOptions {
+            useIR = true
+        }
+    }
+}
+
+gradle.buildFinished {
+    project.buildDir.deleteRecursively()
+}
