@@ -54,5 +54,6 @@ include(
     "crypto-square",
     "robot-name",
     "dominoes",
-    "rotational-cipher"
+    "rotational-cipher",
+    "wordy"
 )
