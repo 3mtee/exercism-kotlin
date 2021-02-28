@@ -1,11 +1,24 @@
 class BankAccount {
-    // TODO: implement read access to 'balance'
 
-    fun adjustBalance(amount: Long){
-        TODO("Implement the function to complete the task")
+    var balance: Long = 0
+        private set
+        get() {
+            if (closed) {
+                throw IllegalStateException("Account already closed")
+            }
+            return field
+        }
+    private var closed = false
+
+    @Synchronized
+    fun adjustBalance(amount: Long) {
+        if (closed) {
+            throw IllegalStateException("Account already closed")
+        }
+        balance += amount
     }
 
     fun close() {
-        TODO("Implement the function to complete the task")
+        closed = true
     }
 }
