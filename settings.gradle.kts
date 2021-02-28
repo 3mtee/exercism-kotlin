@@ -55,5 +55,6 @@ include(
     "robot-name",
     "dominoes",
     "rotational-cipher",
-    "wordy"
+    "wordy",
+    "run-length-encoding"
 )
