@@ -56,5 +56,6 @@ include(
     "dominoes",
     "rotational-cipher",
     "wordy",
-    "run-length-encoding"
+    "run-length-encoding",
+    "bank-account"
 )
