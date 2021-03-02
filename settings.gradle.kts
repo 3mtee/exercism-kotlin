@@ -57,5 +57,6 @@ include(
     "rotational-cipher",
     "wordy",
     "run-length-encoding",
-    "bank-account"
+    "bank-account",
+    "scale-generator"
 )
