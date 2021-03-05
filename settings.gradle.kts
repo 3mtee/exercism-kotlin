@@ -58,5 +58,6 @@ include(
     "wordy",
     "run-length-encoding",
     "bank-account",
-    "scale-generator"
+    "scale-generator",
+    "linked-list"
 )
