@@ -59,5 +59,6 @@ include(
     "run-length-encoding",
     "bank-account",
     "scale-generator",
-    "linked-list"
+    "linked-list",
+    "perfect-numbers"
 )
