@@ -60,5 +60,6 @@ include(
     "bank-account",
     "scale-generator",
     "linked-list",
-    "perfect-numbers"
+    "perfect-numbers",
+    "sum-of-multiples"
 )
