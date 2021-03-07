@@ -63,5 +63,6 @@ include(
     "perfect-numbers",
     "sum-of-multiples",
     "sieve",
-    "yacht"
+    "yacht",
+    "binary-search"
 )
