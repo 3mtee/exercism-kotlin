@@ -1,6 +1,10 @@
 object SumOfMultiples {
 
-    fun sum(factors: Set<Int>, limit: Int): Int {
-        TODO("Implement this function to complete the task")
+    fun sum(factors: Set<Int>, limit: Int) = if (factors.isNotEmpty()) {
+        (factors.minOrNull()!! until limit)
+            .filter { factors.any { it != 0 && it % it == 0 } }
+            .sum()
+    } else {
+        0
     }
 }
