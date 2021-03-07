@@ -62,5 +62,6 @@ include(
     "linked-list",
     "perfect-numbers",
     "sum-of-multiples",
-    "sieve"
+    "sieve",
+    "yacht"
 )
