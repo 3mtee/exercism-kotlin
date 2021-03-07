@@ -61,5 +61,6 @@ include(
     "scale-generator",
     "linked-list",
     "perfect-numbers",
-    "sum-of-multiples"
+    "sum-of-multiples",
+    "sieve"
 )
