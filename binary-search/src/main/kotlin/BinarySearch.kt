@@ -14,6 +14,6 @@ object BinarySearch {
                 else -> return mid
             }
         }
-        throw NoSuchElementException("Item cannot be not found")
+        throw NoSuchElementException("Item cannot be found")
     }
 }
