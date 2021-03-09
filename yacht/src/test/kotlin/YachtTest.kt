@@ -1,8 +1,6 @@
-import org.junit.Rule
-import org.junit.rules.ExpectedException
+import YachtCategory.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import YachtCategory.*
 
 class YachtTest {
 
