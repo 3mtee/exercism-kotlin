@@ -64,5 +64,6 @@ include(
     "sum-of-multiples",
     "sieve",
     "yacht",
-    "binary-search"
+    "binary-search",
+    "grains"
 )
