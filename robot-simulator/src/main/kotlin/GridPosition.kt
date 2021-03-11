@@ -1,1 +1,3 @@
-data class GridPosition(val x: Int, val y: Int)
+data class GridPosition(var x: Int, var y: Int) {
+    constructor() : this(0, 0)
+}
