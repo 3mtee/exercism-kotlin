@@ -11,13 +11,5 @@ object ScrabbleScore {
         else -> 0
     }
 
-    fun scoreWord(word: String): Int {
-        if (word.isBlank()) {
-            return 0
-        }
-        return word
-            .asSequence()
-            .map { scoreLetter(it) }
-            .reduce { acc, i -> acc + i }
-    }
+    fun scoreWord(word: String) = word.sumBy { scoreLetter(it) }
 }
