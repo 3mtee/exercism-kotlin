@@ -66,5 +66,6 @@ include(
     "yacht",
     "binary-search",
     "grains",
-    "robot-simulator"
+    "robot-simulator",
+    "forth"
 )
