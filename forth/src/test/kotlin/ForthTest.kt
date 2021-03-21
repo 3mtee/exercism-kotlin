@@ -1,13 +1,7 @@
-import org.junit.Rule
-import org.junit.rules.ExpectedException
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 abstract class ForthTest {
-
-    @Rule
-    @JvmField
-    var expectedException = ExpectedException.none()
 
     class ParsingAndNumbersTest : ForthTest() {
 
@@ -20,15 +14,13 @@ abstract class ForthTest {
         @Test
         fun `can add two numbers`() = assertEquals(listOf(3), Forth().evaluate("1 2 +"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("+")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 +")
         }
     }
@@ -38,15 +30,13 @@ abstract class ForthTest {
         @Test
         fun `can subtract two numbers`() = assertEquals(listOf(-1), Forth().evaluate("3 4 -"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("-")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 -")
         }
     }
@@ -56,15 +46,13 @@ abstract class ForthTest {
         @Test
         fun `can multiply two numbers`() = assertEquals(listOf(8), Forth().evaluate("2 4 *"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("*")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 *")
         }
     }
@@ -77,21 +65,18 @@ abstract class ForthTest {
         @Test
         fun `performs integer division`() = assertEquals(listOf(2), Forth().evaluate("8 3 /"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if dividing by zero`() {
-            expectedException.expectMessage("divide by zero")
             Forth().evaluate("4 0 /")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("/")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 /")
         }
     }
@@ -113,9 +98,8 @@ abstract class ForthTest {
         @Test
         fun `copies the top value on the stack`() = assertEquals(listOf(1, 2, 2), Forth().evaluate("1 2 dup"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("dup")
         }
     }
@@ -128,9 +112,8 @@ abstract class ForthTest {
         @Test
         fun `removes the top value on the stack if it is not the only one`() = assertEquals(listOf(1), Forth().evaluate("1 2 drop"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("drop")
         }
     }
@@ -143,15 +126,13 @@ abstract class ForthTest {
         @Test
         fun `swaps the top two values on the stack if they are not the only ones`() = assertEquals(listOf(1, 3, 2), Forth().evaluate("1 2 3 swap"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("swap")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 swap")
         }
     }
@@ -164,15 +145,13 @@ abstract class ForthTest {
         @Test
         fun `copies the second element if there are more than two`() = assertEquals(listOf(1, 2, 3, 2), Forth().evaluate("1 2 3 over"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is nothing on the stack`() {
-            expectedException.expectMessage("empty stack")
             Forth().evaluate("over")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if there is only one value on the stack`() {
-            expectedException.expectMessage("only one value on the stack")
             Forth().evaluate("1 over")
         }
     }
@@ -200,15 +179,13 @@ abstract class ForthTest {
         @Test
         fun `can define word that uses word with the same name`() = assertEquals(listOf(11), Forth().evaluate(": foo 10 ;", ": foo foo 1 + ;", "foo"))
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `cannot redefine numbers`() {
-            expectedException.expectMessage("illegal operation")
             Forth().evaluate(": 1 2 ;")
         }
 
-        @Test
+        @Test(expected = IllegalArgumentException::class)
         fun `errors if executing a non-existent word`() {
-            expectedException.expectMessage("undefined operation")
             Forth().evaluate("foo")
         }
     }
