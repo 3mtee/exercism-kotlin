@@ -68,5 +68,6 @@ include(
     "grains",
     "robot-simulator",
     "forth",
-    "collatz-conjecture"
+    "collatz-conjecture",
+    "nth-prime"
 )
