@@ -67,5 +67,6 @@ include(
     "binary-search",
     "grains",
     "robot-simulator",
-    "forth"
+    "forth",
+    "collatz-conjecture"
 )
