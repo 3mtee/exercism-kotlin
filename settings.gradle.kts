@@ -69,5 +69,6 @@ include(
     "robot-simulator",
     "forth",
     "collatz-conjecture",
-    "nth-prime"
+    "nth-prime",
+    "prime-factors"
 )
