@@ -71,5 +71,6 @@ include(
     "collatz-conjecture",
     "nth-prime",
     "prime-factors",
-    "pascals-triangle"
+    "pascals-triangle",
+    "complex-numbers"
 )
