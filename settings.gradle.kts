@@ -70,5 +70,6 @@ include(
     "forth",
     "collatz-conjecture",
     "nth-prime",
-    "prime-factors"
+    "prime-factors",
+    "pascals-triangle"
 )
