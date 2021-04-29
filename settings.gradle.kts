@@ -72,5 +72,6 @@ include(
     "nth-prime",
     "prime-factors",
     "pascals-triangle",
-    "complex-numbers"
+    "complex-numbers",
+    "kindergarten-garden"
 )
