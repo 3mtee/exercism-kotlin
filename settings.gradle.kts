@@ -73,5 +73,6 @@ include(
     "prime-factors",
     "pascals-triangle",
     "complex-numbers",
-    "kindergarten-garden"
+    "kindergarten-garden",
+    "all-your-base"
 )
