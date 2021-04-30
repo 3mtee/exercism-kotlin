@@ -74,5 +74,6 @@ include(
     "pascals-triangle",
     "complex-numbers",
     "kindergarten-garden",
-    "all-your-base"
+    "all-your-base",
+    "clock"
 )
