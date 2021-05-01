@@ -8,6 +8,10 @@ plugins {
 }
 
 subprojects {
+    repositories {
+        mavenCentral()
+    }
+
     tasks.withType<KotlinCompile> {
         kotlinOptions {
             useIR = true
