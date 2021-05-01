@@ -76,5 +76,6 @@ include(
     "kindergarten-garden",
     "all-your-base",
     "clock",
-    "spiral-matrix"
+    "spiral-matrix",
+    "matching-brackets"
 )
