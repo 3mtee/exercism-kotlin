@@ -1,5 +1,8 @@
 object ETL {
-    fun transform(source: Map<Int, Collection<Char>>): Map<Char, Int> {
-        TODO("Implement the function to complete the task")
-    }
+    fun transform(source: Map<Int, Collection<Char>>) = source
+        .flatMap { transform(it) }
+        .toMap()
+
+    private fun transform(sourceEntry: Map.Entry<Int, Collection<Char>>) =
+        sourceEntry.value.map { Pair(it.toLowerCase(), sourceEntry.key) }
 }
