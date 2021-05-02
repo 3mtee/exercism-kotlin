@@ -77,5 +77,6 @@ include(
     "all-your-base",
     "clock",
     "spiral-matrix",
-    "matching-brackets"
+    "matching-brackets",
+    "change"
 )
