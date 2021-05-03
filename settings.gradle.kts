@@ -81,5 +81,6 @@ include(
     "change",
     "etl",
     "grade-school",
-    "binary-search-tree"
+    "binary-search-tree",
+    "atbash-cipher"
 )
