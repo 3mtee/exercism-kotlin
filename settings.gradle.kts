@@ -79,5 +79,6 @@ include(
     "spiral-matrix",
     "matching-brackets",
     "change",
-    "etl"
+    "etl",
+    "grade-school"
 )
