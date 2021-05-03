@@ -80,5 +80,6 @@ include(
     "matching-brackets",
     "change",
     "etl",
-    "grade-school"
+    "grade-school",
+    "binary-search-tree"
 )
