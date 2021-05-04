@@ -83,5 +83,6 @@ include(
     "grade-school",
     "binary-search-tree",
     "atbash-cipher",
-    "say"
+    "say",
+    "simple-cipher"
 )
