@@ -84,5 +84,6 @@ include(
     "binary-search-tree",
     "atbash-cipher",
     "say",
-    "simple-cipher"
+    "simple-cipher",
+    "rail-fence-cipher"
 )
