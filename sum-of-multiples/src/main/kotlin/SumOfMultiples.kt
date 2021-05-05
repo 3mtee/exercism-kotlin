@@ -1,10 +1,4 @@
 object SumOfMultiples {
-
-    fun sum(factors: Set<Int>, limit: Int) = if (factors.isNotEmpty()) {
-        (factors.minOrNull()!! until limit)
-            .filter { factors.any { it != 0 && it % it == 0 } }
-            .sum()
-    } else {
-        0
-    }
+    fun sum(multiples: Set<Int>, limit: Int): Int =
+        multiples.filter { it != 0 }.flatMap { 0 until limit step it }.toSet().sum()
 }
