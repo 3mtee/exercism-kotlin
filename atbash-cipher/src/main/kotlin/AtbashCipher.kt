@@ -4,7 +4,7 @@ object Atbash {
     private val encodeMap = alphabet.zip(reversedAlphabet).toMap()
     private val decodeMap = reversedAlphabet.zip(alphabet).toMap()
     fun encode(s: String) = s
-        .toLowerCase()
+        .lowercase()
         .asSequence()
         .filter { it.isLetterOrDigit() }
         .map { encodeMap.getOrDefault(it, it) }
@@ -13,7 +13,7 @@ object Atbash {
         .joinToString(" ")
 
     fun decode(s: String) = s
-        .toLowerCase()
+        .lowercase()
         .filter { it.isLetterOrDigit() }
         .map { decodeMap.getOrDefault(it, it) }
         .joinToString("")

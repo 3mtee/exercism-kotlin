@@ -3,7 +3,7 @@ object Bob {
 
         val trimmedInput = input.trim()
         return when {
-            trimmedInput.contains(Regex("[a-zA-Z]")) && trimmedInput == trimmedInput.toUpperCase() -> {
+            trimmedInput.contains(Regex("[a-zA-Z]")) && trimmedInput == trimmedInput.uppercase() -> {
                 if (trimmedInput.endsWith("?")) {
                     "Calm down, I know what I'm doing!"
                 } else {

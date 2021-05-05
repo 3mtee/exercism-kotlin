@@ -8,7 +8,7 @@ class Scale(private val tonic: String) {
         .run { cycleNotes() }
 
     private fun List<String>.cycleNotes() =
-        dropWhile { it.toUpperCase() != tonic.toUpperCase() } + takeWhile { it.toUpperCase() != tonic.toUpperCase() }
+        dropWhile { it.uppercase() != tonic.uppercase() } + takeWhile { it.uppercase() != tonic.uppercase() }
 
     fun interval(intervals: String): List<String> =
         intervals

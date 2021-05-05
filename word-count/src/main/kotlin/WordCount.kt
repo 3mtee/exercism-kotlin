@@ -10,5 +10,5 @@ object WordCount {
     private fun clearWord(word: String) = word
         .trim('\'') // remove any quotations around words
         .replace(Regex("[^\\w\\d']"), "") // leave only alphanums + quotes
-        .toLowerCase()
+        .lowercase()
 }

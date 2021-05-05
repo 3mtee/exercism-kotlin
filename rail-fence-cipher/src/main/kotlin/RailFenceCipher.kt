@@ -1,4 +1,4 @@
-class RailFenceCipher {
+class RailFenceCipher(private val any:Any) {
 
     // TODO: Implement proper constructor
 

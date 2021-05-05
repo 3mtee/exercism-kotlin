@@ -12,7 +12,7 @@ object ResistorColorTrio {
 
     private fun formatResistance(value: Int): String {
         val unitOrdinal = log(value.toDouble(), 1000.0).toInt()
-        val unit = Unit.values()[unitOrdinal].name.toLowerCase()
+        val unit = Unit.values()[unitOrdinal].name.lowercase()
         val n = value / 1_000.0.pow(unitOrdinal).toInt()
         return "$n $unit"
     }

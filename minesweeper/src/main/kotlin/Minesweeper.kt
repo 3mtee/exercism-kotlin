@@ -27,5 +27,5 @@ class MinesweeperBoard(private val board: List<String>) {
         return if (count > 0) count.getChar() else ' '
     }
 
-    private fun Int.getChar() = (this + '0'.toInt()).toChar()
+    private fun Int.getChar() = (this + '0'.code).toChar()
 }

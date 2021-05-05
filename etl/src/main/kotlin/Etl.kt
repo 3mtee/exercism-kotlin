@@ -4,5 +4,5 @@ object ETL {
         .toMap()
 
     private fun transform(sourceEntry: Map.Entry<Int, Collection<Char>>) =
-        sourceEntry.value.map { Pair(it.toLowerCase(), sourceEntry.key) }
+        sourceEntry.value.map { Pair(it.lowercaseChar(), sourceEntry.key) }
 }

@@ -21,7 +21,7 @@ enum class YachtCategory(val score: (dices: List<Int>) -> Int) {
             }
             .entries
             .filter { it.value == 2 || it.value == 3 }
-            .sumBy { it.key * it.value }
+            .sumOf { it.key * it.value }
     }),
     FOUR_OF_A_KIND({ dices ->
         dices
@@ -29,7 +29,7 @@ enum class YachtCategory(val score: (dices: List<Int>) -> Int) {
             .eachCount()
             .entries
             .filter { it.value >= 4 }
-            .sumBy { it.key * 4 }
+            .sumOf { it.key * 4 }
     }),
     LITTLE_STRAIGHT({ if (it.sorted() == listOf(1, 2, 3, 4, 5)) 30 else 0 }),
     BIG_STRAIGHT({ if (it.sorted() == listOf(2, 3, 4, 5, 6)) 30 else 0 }),

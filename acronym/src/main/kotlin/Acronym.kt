@@ -7,6 +7,6 @@ object Acronym {
                 if (trim.isNotEmpty()) trim[0] else ""
             }
             .joinToString(separator = "")
-            .toUpperCase()
+            .uppercase()
     }
 }

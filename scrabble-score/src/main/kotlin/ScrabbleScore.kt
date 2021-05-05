@@ -1,6 +1,6 @@
 object ScrabbleScore {
 
-    private fun scoreLetter(c: Char): Int = when (c.toLowerCase()) {
+    private fun scoreLetter(c: Char): Int = when (c.lowercaseChar()) {
         in "aeioulnrst" -> 1
         in "dg" -> 2
         in "bcmp" -> 3
@@ -11,5 +11,5 @@ object ScrabbleScore {
         else -> 0
     }
 
-    fun scoreWord(word: String) = word.sumBy { scoreLetter(it) }
+    fun scoreWord(word: String) = word.sumOf { scoreLetter(it) }
 }

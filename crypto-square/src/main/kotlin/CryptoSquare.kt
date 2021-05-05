@@ -7,7 +7,7 @@ object CryptoSquare {
 
         return plaintext
             .filter { it.isLetterOrDigit() }
-            .toLowerCase()
+            .lowercase()
             .apply { if (isEmpty()) return "" }
             .let {
                 val numCols = ceil(sqrt(it.length.toDouble())).toInt()

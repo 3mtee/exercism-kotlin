@@ -45,7 +45,7 @@ class Forth {
     private fun processReplacements(lines: List<String>): List<String> {
         val replacements = mutableMapOf<String, String>()
         return lines.mapNotNull {
-            val line = it.toLowerCase()
+            val line = it.lowercase()
             if (line.matches(Regex(":.*;"))) {
                 updateReplacementsMap(line, replacements)
                 null
@@ -79,7 +79,7 @@ class Forth {
         .joinToString(" ")
 
     private fun evaluateLine(line: String): List<Int> {
-        return line.toLowerCase().split(" ")
+        return line.lowercase().split(" ")
             .fold(listOf()) { acc, c ->
                 when {
                     c.toIntOrNull() != null -> acc + c.toInt()

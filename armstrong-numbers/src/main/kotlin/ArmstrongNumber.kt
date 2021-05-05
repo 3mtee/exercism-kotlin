@@ -7,7 +7,7 @@ object ArmstrongNumber {
         return sInput
             .asSequence()
             .map { (it - '0').toDouble() }
-            .sumBy { it.pow(sInput.length).toInt() } == input
+            .sumOf { it.pow(sInput.length).toInt() } == input
     }
 
 }

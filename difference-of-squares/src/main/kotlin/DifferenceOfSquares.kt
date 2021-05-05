@@ -6,7 +6,7 @@ class Squares(number: Int) {
 
     fun sumOfSquares(): Int {
         return range
-            .sumByDouble { it.toDouble().pow(2) }
+            .sumOf { it.toDouble().pow(2) }
             .toInt()
     }
 
