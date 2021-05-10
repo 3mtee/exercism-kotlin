@@ -85,5 +85,6 @@ include(
     "atbash-cipher",
     "say",
     "simple-cipher",
-    "rail-fence-cipher"
+    "rail-fence-cipher",
+    "affine-cipher"
 )
