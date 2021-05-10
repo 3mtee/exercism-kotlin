@@ -87,5 +87,6 @@ include(
     "simple-cipher",
     "rail-fence-cipher",
     "affine-cipher",
-    "sublist"
+    "sublist",
+    "list-ops"
 )
