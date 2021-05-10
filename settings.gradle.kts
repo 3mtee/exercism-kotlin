@@ -89,5 +89,6 @@ include(
     "affine-cipher",
     "sublist",
     "list-ops",
-    "diffie-hellman"
+    "diffie-hellman",
+    "react"
 )
