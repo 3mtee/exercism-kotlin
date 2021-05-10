@@ -88,5 +88,6 @@ include(
     "rail-fence-cipher",
     "affine-cipher",
     "sublist",
-    "list-ops"
+    "list-ops",
+    "diffie-hellman"
 )
