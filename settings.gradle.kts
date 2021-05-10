@@ -90,5 +90,6 @@ include(
     "sublist",
     "list-ops",
     "diffie-hellman",
-    "react"
+    "react",
+    "zebra-puzzle"
 )
